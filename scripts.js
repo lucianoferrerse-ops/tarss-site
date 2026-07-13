@@ -50,6 +50,8 @@ if ('IntersectionObserver' in window) {
 
 const topbar = document.querySelector('.topbar');
 const topbarScrollThreshold = 28;
+const contactForm = document.querySelector('#contact-form');
+const contactStatus = document.querySelector('#contact-status');
 
 if (topbar) {
   window.addEventListener('scroll', () => {
@@ -57,6 +59,34 @@ if (topbar) {
       topbar.classList.add('scrolled');
     } else {
       topbar.classList.remove('scrolled');
+    }
+  });
+}
+
+if (contactForm && contactStatus) {
+  contactForm.addEventListener('submit', async (event) => {
+    event.preventDefault();
+    contactStatus.textContent = 'Enviando mensaje...';
+
+    const formData = new FormData(contactForm);
+    try {
+      const response = await fetch(contactForm.action, {
+        method: 'POST',
+        body: formData,
+        headers: {
+          Accept: 'application/json',
+        },
+      });
+
+      if (response.ok) {
+        contactStatus.textContent = 'Gracias. Tu mensaje fue enviado correctamente.';
+        contactForm.reset();
+      } else {
+        const data = await response.json();
+        contactStatus.textContent = data?.error || 'Hubo un problema. Intenta de nuevo.';
+      }
+    } catch (error) {
+      contactStatus.textContent = 'Error al enviar. Verifica tu conexión o intenta más tarde.';
     }
   });
 }

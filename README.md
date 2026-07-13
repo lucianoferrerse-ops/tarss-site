@@ -11,6 +11,7 @@ Landing page para ofrecer:
 - `servicios.html`
 - `contacto.html`
 - `blog.html`
+- `404.html`
 - `styles.css`
 - `scripts.js`
 
@@ -26,7 +27,8 @@ El menú superior funciona en mobile con un botón hamburguesa para abrir y cerr
 ## Cómo usar
 1. Copia los archivos a una carpeta.
 2. Abre `index.html` en el navegador para ver la página local.
-3. Si quieres el formulario funcional, crea un formulario en Formspree y reemplaza el `action` en los archivos HTML.
+3. Para activar el formulario de contacto real, crea un formulario gratis en Formspree y reemplaza el `action` en `contacto.html` con tu ID de formulario.
+4. Publica el sitio en GitHub y despliega en Cloudflare Pages.
 
 ## Publicar en GitHub + Cloudflare Pages
 1. Crea un repositorio nuevo en GitHub llamado por ejemplo `tarss-site`.

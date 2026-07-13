@@ -9,7 +9,10 @@
   <meta property="og:description" content="Contacto Tarss: envía un email o chatea por WhatsApp para pedir tu propuesta de sitio web y servicios digitales." />
   <meta property="og:image" content="favicon.svg" />
   <meta property="og:type" content="website" />
+  <meta property="og:locale" content="es_ES" />
+  <meta property="og:url" content="https://tarss-site.pages.dev/contacto" />
   <meta property="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@tarss" />
   <title>Tarss | Contacto</title>
   <link rel="icon" href="favicon.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="styles.css" />
@@ -45,7 +48,7 @@
   <main>
     <section class="section container">
       <h2>Contáctame</h2>
-      <p>Estoy disponible para ayudarte con tu sitio web, mantenimiento, redes sociales y asesoría digital.</p>
+      <p>Estoy listo para ayudarte con tu sitio web, mantenimiento, redes sociales y asesoría digital. Respondo rápido y trabajo con propuestas claras.</p>
       <div class="grid">
         <article class="card">
           <h3>Email</h3>
@@ -65,20 +68,23 @@
     <section class="section cta-section">
       <div class="container cta-box">
         <h2>Formulario de contacto</h2>
-        <form action="https://formspree.io/f/your-form-id" method="POST" class="contact-form">
+        <form id="contact-form" action="https://formspree.io/f/your-form-id" method="POST" class="contact-form">
+          <input type="hidden" name="_subject" value="Nuevo mensaje desde Tarss" />
+          <input type="hidden" name="_language" value="es" />
           <label>
             Nombre
             <input type="text" name="name" required />
           </label>
           <label>
             Email
-            <input type="email" name="email" required />
+            <input type="email" name="_replyto" required />
           </label>
           <label>
             Mensaje
             <textarea name="message" rows="5" required></textarea>
           </label>
           <button class="button" type="submit">Enviar mensaje</button>
+          <p id="contact-status" class="status-message" aria-live="polite"></p>
         </form>
       </div>
     </section>

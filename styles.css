@@ -679,6 +679,23 @@ textarea {
   border: 1px solid var(--border);
 }
 
+.error-section {
+  padding: 6rem 0 5rem;
+}
+
+.error-section .cta-box {
+  text-align: center;
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.status-message {
+  margin-top: 1rem;
+  color: #d1e8ff;
+  font-size: 0.95rem;
+  opacity: 0.95;
+}
+
 @media (max-width: 860px) {
   .nav-container {
     flex-direction: column;
