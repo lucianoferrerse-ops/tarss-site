@@ -25,6 +25,22 @@ El sitio ya está desplegado en Cloudflare Pages y listo para promoción:
 ## Dominio personalizado
 Si querés usar un dominio propio, agregá el dominio en Cloudflare Pages y configura un registro CNAME que apunte a `tarss-site.pages.dev`.
 
+## SEO local y dominio
+- Usa el mismo nombre, teléfono y email en tu sitio, redes y directorios.
+- Incluye tu ciudad o región en los encabezados y descripciones cuando sea relevante.
+- Agrega un perfil en Google Business o directorios locales si tenés un negocio físico.
+- Mantén la página de contacto actualizada con tu información de contacto.
+
+## Rendimiento
+- El sitio ya usa `defer` en el script principal para que la página cargue primero.
+- Evitá imágenes pesadas; usa SVG o fotos optimizadas cuando agregues contenido visual.
+- Si agregás fuentes externas, prefierí `preconnect` y carga solo estilos necesarios.
+
+## Accesibilidad
+- El sitio incluye un enlace de salto (`Saltar al contenido`) para usuarios de teclado.
+- El menú usa `role="navigation"` y `aria-label` para mejorar la navegación semántica.
+- Los botones y campos de formulario tienen foco visible para accesibilidad.
+
 ## SEO básico
 - Cada página incluye `meta description`, `og:title`, `og:description`, `og:url` y `canonical`.
 - Cambia los textos y meta tags según tu oferta real para mejorar la visibilidad.

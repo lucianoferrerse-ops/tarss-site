@@ -372,6 +372,26 @@ a {
   opacity: 0.95;
 }
 
+.skip-link {
+  position: absolute;
+  top: -999px;
+  left: 0;
+  background: rgba(20, 24, 44, 0.95);
+  color: #fff;
+  padding: 0.75rem 1rem;
+  z-index: 100;
+  transition: top 0.25s ease;
+}
+
+.skip-link:focus-visible {
+  top: 1rem;
+}
+
+:focus-visible {
+  outline: 3px solid #72d6ff;
+  outline-offset: 4px;
+}
+
 .button-alt {
   background: var(--button-alt);
   border: 1px solid rgba(255, 255, 255, 0.14);
@@ -655,6 +675,14 @@ textarea:focus {
   border-color: rgba(114, 214, 255, 0.7);
   box-shadow: 0 0 0 4px rgba(114, 214, 255, 0.1);
   background: rgba(16, 19, 40, 0.98);
+}
+
+input:focus-visible,
+textarea:focus-visible,
+button:focus-visible,
+a:focus-visible {
+  outline: 3px solid #72d6ff;
+  outline-offset: 4px;
 }
 
 textarea {

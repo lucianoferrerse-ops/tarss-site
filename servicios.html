@@ -7,9 +7,13 @@
   <meta name="keywords" content="diseño web, mantenimiento web, redes sociales, asesoría digital, pymes" />
   <meta name="theme-color" content="#07070d" />
   <meta property="og:title" content="Tarss | Servicios detallados" />
+  <meta property="og:site_name" content="Tarss" />
   <link rel="canonical" href="https://tarss-site.pages.dev/servicios" />
   <meta property="og:description" content="Servicios detallados de Tarss: diseño web, mantenimiento, redes sociales y asesoría digital para negocios." />
-  <meta property="og:image" content="favicon.svg" />
+  <meta property="twitter:title" content="Tarss | Servicios detallados" />
+  <meta name="twitter:description" content="Servicios detallados de Tarss: diseño web, mantenimiento, redes sociales y asesoría digital para negocios." />
+  <meta name="twitter:creator" content="@tarss" />
+  <meta property="og:image" content="https://tarss-site.pages.dev/favicon.svg" />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="es_ES" />
   <meta property="og:url" content="https://tarss-site.pages.dev/servicios" />
@@ -20,7 +24,8 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <nav class="topbar">
+  <a class="skip-link" href="#main-content">Saltar al contenido</a>
+  <nav class="topbar" role="navigation" aria-label="Menú principal">
     <div class="container nav-container">
       <a class="brand" href="index.html">Tarss</a>
       <button class="nav-toggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="primary-navigation"><span></span></button>
@@ -30,7 +35,7 @@
         <a href="index.html#casos">Casos</a>
         <a href="blog.html">Blog</a>
         <a href="contacto.html">Contacto</a>
-        <a class="button button-small" href="index.html">Inicio</a>
+        <a class="button button-small" aria-current="page" href="servicios.html">Servicios detallados</a>
       </div>
     </div>
   </nav>
@@ -47,7 +52,7 @@
     </div>
   </header>
 
-  <main>
+  <main id="main-content" role="main">
     <section class="section container">
       <h2>Servicios detallados</h2>
       <div class="grid">
@@ -193,6 +198,6 @@
   </footer>
 
   <a class="floating-contact" href="https://wa.me/5492617459362" target="_blank" rel="noopener noreferrer">WhatsApp</a>
-  <script src="scripts.js"></script>
+  <script src="scripts.js" defer></script>
 </body>
 </html>
