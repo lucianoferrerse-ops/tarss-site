@@ -14,6 +14,10 @@ Landing page para ofrecer:
 - `styles.css`
 - `scripts.js`
 
+## Sitio público
+El sitio ya está desplegado en Cloudflare Pages:
+- https://tarss-site.pages.dev/
+
 ## Blog
 El sitio incluye una página de blog con ideas de contenido para atraer clientes y mostrar tu experiencia.
 

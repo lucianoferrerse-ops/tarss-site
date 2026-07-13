@@ -9,14 +9,26 @@ document.querySelectorAll('a[href^="#"]').forEach((link) => {
 });
 
 const navToggle = document.querySelector('.nav-toggle');
+const navBar = navToggle?.closest('.topbar');
+const navLinks = document.querySelectorAll('.nav-links a');
+
 if (navToggle) {
+  navToggle.setAttribute('aria-expanded', 'false');
+
   navToggle.addEventListener('click', () => {
-    const navBar = navToggle.closest('.topbar');
-    if (navBar) {
-      navBar.classList.toggle('nav-open');
-    }
+    const isOpen = navBar?.classList.toggle('nav-open');
+    navToggle.setAttribute('aria-expanded', String(!!isOpen));
   });
 }
+
+navLinks.forEach((link) => {
+  link.addEventListener('click', () => {
+    if (navBar?.classList.contains('nav-open')) {
+      navBar.classList.remove('nav-open');
+      navToggle?.setAttribute('aria-expanded', 'false');
+    }
+  });
+});
 
 const revealTargets = document.querySelectorAll('section, .card, .case-card, .cta-box, .hero h1, .hero-text, .hero-actions, label');
 revealTargets.forEach((el) => el.classList.add('reveal'));
