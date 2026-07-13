@@ -18,6 +18,9 @@ Landing page para ofrecer:
 ## Sitio público
 El sitio ya está desplegado en Cloudflare Pages:
 - https://tarss-site.pages.dev/
+- Página de contacto: https://tarss-site.pages.dev/contacto
+- Página de gracias: https://tarss-site.pages.dev/gracias
+- Página 404: https://tarss-site.pages.dev/404
 
 ## Blog
 El sitio incluye una página de blog con ideas de contenido para atraer clientes y mostrar tu experiencia.
@@ -57,6 +60,14 @@ El menú superior funciona en mobile con un botón hamburguesa para abrir y cerr
 2. Arrastra la carpeta `Tarss-site`.
 3. Netlify desplegará el sitio automáticamente.
 4. Copia la URL pública y compártela con tus clientes.
+
+## Checklist final
+- [x] Navegación y menú móvil funcionan.
+- [x] WhatsApp y email están disponibles en todas las páginas.
+- [x] Formulario de contacto usa Formspree con un endpoint real.
+- [x] Respuesta de confirmación: `https://tarss-site.pages.dev/gracias`.
+- [x] Página 404 personalizada activa.
+- [x] Sitio desplegado en Cloudflare Pages y accesible públicamente.
 
 ## Cambios recomendados
 - Ajusta los textos y servicios según tu oferta real.
