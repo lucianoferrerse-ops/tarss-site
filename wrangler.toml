@@ -17,9 +17,10 @@ bucket = "public"
 command = ""
 
 # Routes example (uncomment and adapt if you use Workers for routing)
-# [[routes]]
-# pattern = "example.com/*"
-# script = "tarss-site-worker"
+route = "https://tarss-site.pages.dev/api/*"
+
+# If you use a custom domain, replace the route with your domain:
+# route = "https://mi-dominio.com/api/*"
 
 # To publish with Wrangler:
 # 1. Install Wrangler: `npm i -g wrangler` or use `npm run` script.

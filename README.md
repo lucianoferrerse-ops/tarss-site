@@ -65,6 +65,17 @@ El menú superior funciona en mobile con un botón hamburguesa para abrir y cerr
 6. Como `Build command` deja vacío y como `Build output directory` escribe `.`.
 7. Publica el sitio. Cloudflare Pages generará una URL pública automáticamente.
 
+## Asistente IA con OpenAI
+1. Crea una clave en OpenAI (https://platform.openai.com/account/api-keys).
+2. En tu proyecto de Cloudflare Workers o Pages, configura un secreto llamado `OPENAI_API_KEY` con esa clave.
+   - Si usas Wrangler local, ejecuta: `wrangler secret put OPENAI_API_KEY`.
+3. Opcional: configura `OPENAI_MODEL` para usar un modelo más avanzado, por ejemplo `gpt-4.1`.
+   - `wrangler secret put OPENAI_MODEL` y luego pega `gpt-4.1`.
+4. El archivo `worker/index.js` ya está preparado para recibir `POST /api/ai`.
+5. El frontend en `scripts.js` envía preguntas a `/api/ai` y muestra la respuesta.
+6. Publica el worker para que la ruta `https://tarss-site.pages.dev/api/ai` sea atendida por el worker y el resto del sitio siga en Pages.
+7. No guardes el token de OpenAI en los archivos del repositorio.
+
 ## Publicar en Netlify
 1. Con el repositorio en GitHub, ve a https://www.netlify.com/ y regístrate.
 2. Conecta tu cuenta de GitHub.

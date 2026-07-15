@@ -106,6 +106,35 @@
     </section>
   </main>
 
+  <div class="assistant-widget" aria-label="Asistente Tarss">
+    <button class="assistant-toggle" id="assistant-toggle" type="button" aria-expanded="false">
+      Asistente Tarss
+    </button>
+    <div class="assistant-panel" id="assistant-panel" hidden>
+      <div class="assistant-header">
+        <span>Asistente Tarss</span>
+        <button class="assistant-close" id="assistant-close" type="button" aria-label="Cerrar asistente">×</button>
+      </div>
+      <div class="assistant-messages" id="assistant-messages" role="log" aria-live="polite"></div>
+      <p class="assistant-description">Genera propuestas, estimados y mensajes listos para WhatsApp desde aquí.</p>
+      <div class="assistant-actions">
+        <button type="button" id="assistant-proposal">Generar propuesta</button>
+        <button type="button" id="assistant-whatsapp">Mensaje WhatsApp</button>
+      </div>
+      <div class="assistant-suggestions">
+        <button type="button" data-suggestion="Necesito una web para mi negocio">Necesito una web</button>
+        <button type="button" data-suggestion="Quiero un sitio rápido y económico">Sitio rápido</button>
+        <button type="button" data-suggestion="¿Cuánto cuesta una landing page?">Costo landing</button>
+        <button type="button" data-suggestion="Genera una propuesta completa para mi web">Propuesta web</button>
+        <button type="button" data-suggestion="Crea un mensaje breve para enviar por WhatsApp a un cliente potencial">Mensaje WhatsApp</button>
+      </div>
+      <form id="assistant-form" class="assistant-form">
+        <input id="assistant-input" type="text" placeholder="Escribe tu pregunta..." aria-label="Escribe tu pregunta" />
+        <button type="submit">Enviar</button>
+      </form>
+    </div>
+  </div>
+
   <footer class="footer">
     <div class="container footer-grid">
       <div>
@@ -128,3 +157,4 @@
   <script src="scripts.js" defer></script>
 </body>
 </html>
+1
